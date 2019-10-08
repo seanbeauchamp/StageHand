@@ -1,0 +1,10 @@
+{
+"Items": [
+	{ "order": 1, "action": "stall", "value": 2.0 },
+	{ "order": 2, "action": "move-up", "value": 2.5 },
+	{ "order": 3, "action": "stall", "value": 2.0 },
+	{ "order": 4, "action": "target", "value": 2.0 },
+	{ "order": 5, "action": "act", "value": 3.0 },
+	{ "order": 6, "action": "move-left", "value": 2.0 }
+]
+}
