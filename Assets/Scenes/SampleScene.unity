@@ -966,6 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d97ba5b3a60a1d40b1e61fd4a920e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDirection: right
+  goingRight: 0
 --- !u!1 &1513592969
 GameObject:
   m_ObjectHideFlags: 0
