@@ -1722,6 +1722,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 2849013003424452284, guid: 4e1212e6bd06cea469098b488c76661f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 2849013003424452281, guid: 4e1212e6bd06cea469098b488c76661f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6072,6 +6077,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BuzzSaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 5100144226270382158, guid: bb46f3ef3ed905a4cbc712588838cbb1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hazard
       objectReference: {fileID: 0}
     - target: {fileID: 5100144226270382156, guid: bb46f3ef3ed905a4cbc712588838cbb1,
         type: 3}

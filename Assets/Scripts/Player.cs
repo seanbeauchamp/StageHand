@@ -221,7 +221,7 @@ public class Player : Person
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Bat" && !invincible)
+        if (collision.gameObject.tag == "Hazard" && !invincible)
         {
             StartCoroutine(HurtRoutine());
         }

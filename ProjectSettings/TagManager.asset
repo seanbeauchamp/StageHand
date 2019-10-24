@@ -10,7 +10,7 @@ TagManager:
   - UI
   - Barrier
   - Prop
-  - Bat
+  - Hazard
   layers:
   - Default
   - TransparentFX
