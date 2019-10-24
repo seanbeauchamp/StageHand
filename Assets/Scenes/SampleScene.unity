@@ -954,20 +954,32 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5100144225338623742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1485475505
-MonoBehaviour:
+--- !u!61 &1485475505
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485475504}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d97ba5b3a60a1d40b1e61fd4a920e66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDirection: right
-  goingRight: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0067941546, y: -0.020383239}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.90488136, y: 0.90488076}
+  m_EdgeRadius: 0
 --- !u!1 &1513592969
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,15 +6128,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5100144226270382156, guid: bb46f3ef3ed905a4cbc712588838cbb1,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
+    - target: {fileID: 1485475505, guid: bb46f3ef3ed905a4cbc712588838cbb1, type: 3}
+      propertyPath: moveSpeed
+      value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 5100144226270382156, guid: bb46f3ef3ed905a4cbc712588838cbb1,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
+    - target: {fileID: 1485475505, guid: bb46f3ef3ed905a4cbc712588838cbb1, type: 3}
+      propertyPath: goingRight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb46f3ef3ed905a4cbc712588838cbb1, type: 3}

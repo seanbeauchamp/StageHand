@@ -273,44 +273,4 @@ public class Actor : Person
                 return Vector2.zero;    
         }
     }
-
-    //functions likely obsolete after switching away from randomized actions. Maybe back up elsewhere rather than leaving here
-    /*private void determineMovementType()
-    {
-        int testRandom = Random.Range(0, 10);
-        if (testRandom > 8 && currentActNum >= minActsBeforeTargeting)
-            initiateTargetMove();
-        else
-            initiateBlankMove();
-    }*/
-
-    /*private Vector2 chooseDirection()
-    {
-        List<int> directionOptions = new List<int>();
-        for (int n = 0; n < moveDirections.Length; n++)
-            directionOptions.Add(n);
-        //check if a direction is valid. If so, choose it. If not, remove from array and try again
-        //if none valid, return [0,0]. (Freezes until next trigger event. Shouldn't happen ideally)
-        for (int n = 0; n <= directionOptions.Count; n++)
-        {
-            int vectorIndex = Random.Range(0, directionOptions.Count - 1);
-            Vector2 currentVector = moveDirections[vectorIndex];
-            Vector3 tempCenter = collider.bounds.center + new Vector3(currentVector.x * .1f, currentVector.y * .1f, 0);
-            RaycastHit2D[] testRay = Physics2D.RaycastAll(tempCenter, currentVector, targetDistance);
-            bool badDirection = false;
-            foreach (RaycastHit2D hit in testRay)
-            {
-                if (hit.collider.gameObject.tag == "Prop" || hit.collider.gameObject.tag == "Barrier")
-                {
-                    directionOptions.Remove(vectorIndex);
-                    badDirection = true;
-                    break;
-                }
-            }
-            //if no collisions for the tested Vector, return it
-            if (!badDirection)
-                return currentVector;
-        }
-        return Vector2.zero;
-    }*/
 }
