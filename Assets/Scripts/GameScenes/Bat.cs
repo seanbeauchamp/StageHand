@@ -18,6 +18,10 @@ public class Bat : MonoBehaviour
     void Start()
     {
         position = transform.position;
+
+        if (!facingRight)
+            transform.localScale = new Vector3(-transform.localScale.x,
+                transform.localScale.y, transform.localScale.z);
     }
 
     // Update is called once per frame

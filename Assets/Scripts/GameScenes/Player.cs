@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : Person
 {
     float climbSpeed = 1.5f;
+
+    public float batTime;
+    private bool batCountingDown = false;
    
     public bool canClimb = false;
     public bool climbing = false;
@@ -70,6 +73,16 @@ public class Player : Person
             spriteRenderer.enabled = true;
             yield return new WaitForSeconds(0.05f);           
         }
+    }
+
+    IEnumerator BatCountDown(GameObject batSpawner)
+    {
+        batCountingDown = true;
+        yield return new WaitForSeconds(batTime);
+
+        BatSpawner spawnerScript = batSpawner.GetComponent<BatSpawner>();
+        spawnerScript.spawnBat();
+        batCountingDown = false;
     }
 
     public IEnumerator HurtRoutine()
