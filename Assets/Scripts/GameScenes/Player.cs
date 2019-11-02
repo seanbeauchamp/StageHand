@@ -75,16 +75,6 @@ public class Player : Person
         }
     }
 
-    IEnumerator BatCountDown(GameObject batSpawner)
-    {
-        batCountingDown = true;
-        yield return new WaitForSeconds(batTime);
-
-        BatSpawner spawnerScript = batSpawner.GetComponent<BatSpawner>();
-        spawnerScript.spawnBat();
-        batCountingDown = false;
-    }
-
     public IEnumerator HurtRoutine()
     {
         frozen = true;

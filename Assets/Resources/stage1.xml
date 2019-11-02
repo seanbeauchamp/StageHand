@@ -55,7 +55,7 @@
 	  </step>
 	  <step>
 		<order>6</order>
-		<action>move.up</action>
+		<action>move-up</action>
 		<value>0.5</value>
 	  </step>
 	</steps>	

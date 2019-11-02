@@ -6,12 +6,13 @@ public class BatSpawner : MonoBehaviour
 {
     [SerializeField]
     bool facingRight;
+    public int level;
     public GameObject bat;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnBat();
+        //spawnBat();
     }
 
     // Update is called once per frame

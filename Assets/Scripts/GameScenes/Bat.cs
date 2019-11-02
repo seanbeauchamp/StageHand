@@ -31,6 +31,8 @@ public class Bat : MonoBehaviour
             MoveRight();
         else
             MoveLeft();
+
+        checkForRemoval();
     }
 
     void MoveRight()
@@ -43,5 +45,12 @@ public class Bat : MonoBehaviour
     {
         position -= transform.right * Time.deltaTime * moveSpeed;
         transform.position = position + transform.up * Mathf.Sin(Time.time * frequency) * magnitude;
+    }
+
+    void checkForRemoval()
+    {
+        //lazy, replace with amount based on measurement of screen size
+        if (transform.position.x > 5f || transform.position.x < -5f)
+            Destroy(gameObject);
     }
 }
