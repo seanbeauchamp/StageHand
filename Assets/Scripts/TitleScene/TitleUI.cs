@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TitleUI : MonoBehaviour
 {
@@ -42,6 +43,7 @@ public class TitleUI : MonoBehaviour
             switch (currentCursorPos)
             {
                 case 0:
+                    SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
                     break;
                 case 1:
                     break;

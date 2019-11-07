@@ -1,24 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelSelectManager : MonoBehaviour
 {
-    public int numberOfLevels;
-    public GameObject levelBox;
-
-    private Vector2 firstBoxPos = new Vector2(32.4f, 115.9f);
-    private float offsetIncrement = 25f;
+    public GameObject[] levelBoxes;
+    private int currentLevelIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(levelBox.transform.position);
+        currentLevelIndex = 0;
+        highlightCurrentBox();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        checkForKeyPresses();
+    }
+
+    void checkForKeyPresses()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            currentLevelIndex = (currentLevelIndex >= levelBoxes.Length - 1 ? 0 : currentLevelIndex + 1);
+            highlightCurrentBox();
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            currentLevelIndex = (currentLevelIndex <= 0 ? levelBoxes.Length - 1 : currentLevelIndex - 1);
+            highlightCurrentBox();
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+            SceneManager.LoadScene("Title", LoadSceneMode.Single);
+    }
+
+    void highlightCurrentBox()
+    {
+        for (int n = 0; n < levelBoxes.Length; n++)
+        {
+            if (n == currentLevelIndex)
+                levelBoxes[n].GetComponent<Image>().color = Color.white;
+            else
+                levelBoxes[n].GetComponent<Image>().color = Color.green;
+        }
     }
 }
