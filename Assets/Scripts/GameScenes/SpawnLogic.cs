@@ -27,6 +27,9 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameRunning)
+            return;
+
         checkPlayerLevel();
         compareLevels();
         //if no coroutines running after the compare, start countdown again with same level

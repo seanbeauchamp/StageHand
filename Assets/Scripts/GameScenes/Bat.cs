@@ -27,6 +27,9 @@ public class Bat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameRunning)      
+            Destroy(gameObject);
+
         if (facingRight)
             MoveRight();
         else

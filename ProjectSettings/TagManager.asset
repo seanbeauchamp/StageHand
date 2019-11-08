@@ -22,7 +22,7 @@ TagManager:
   - 
   - Ladder
   - Beams
-  - 
+  - Notice
   - 
   - 
   - 
@@ -77,4 +77,7 @@ TagManager:
     locked: 0
   - name: ActorFront
     uniqueID: 3333098295
+    locked: 0
+  - name: UI
+    uniqueID: 203909605
     locked: 0

@@ -33,6 +33,9 @@ public class Buzzsaw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameRunning)
+            Destroy(gameObject);
+
         origin = transform.GetComponent<Renderer>().bounds.center;
         moveSaw();
     }

@@ -65,6 +65,9 @@ public class Actor : Person
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameRunning)
+            Destroy(gameObject);
+
         if (canAct)
         {
             //determineMovementType();

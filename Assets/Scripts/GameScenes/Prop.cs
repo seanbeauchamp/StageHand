@@ -48,6 +48,9 @@ public class Prop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameRunning)
+            return;
+
         checkForFlash();
 
         if (eventTargeted)
