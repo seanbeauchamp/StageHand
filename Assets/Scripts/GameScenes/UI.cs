@@ -59,7 +59,7 @@ public class UI : MonoBehaviour
         statusBar.fillAmount += amount;
 
         if (statusBar.fillAmount == 0f)
-            LoseGame();
+            StartCoroutine(LoseGame());
     }
 
     IEnumerator LoseGame()
