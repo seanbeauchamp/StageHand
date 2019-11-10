@@ -25,7 +25,7 @@ public class StepsManager : MonoBehaviour
     {
         actorSteps = new List<ActorSteps>();
 
-        TextAsset xmlData = (TextAsset)Resources.Load("stage1");
+        TextAsset xmlData = (TextAsset)Resources.Load(xmlFileName);
         XmlDocument xmlOpeningDocument = new XmlDocument();
         xmlOpeningDocument.LoadXml(xmlData.text);
 

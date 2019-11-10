@@ -61,6 +61,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -162,13 +163,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4e84fce5b8983247a0bcc4da5f7490c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
   isMoving: 0
+  batTime: 5
   canClimb: 0
   climbing: 0
   flipping: 0
   reachedTop: 0
+  invincible: 0
   coll2d: {fileID: 1461696215}
   flipCollider: {fileID: 1461696217}
+  hurtSprite: {fileID: 0}
+  downSprite: {fileID: 0}
 --- !u!61 &1461696217
 BoxCollider2D:
   m_ObjectHideFlags: 0
