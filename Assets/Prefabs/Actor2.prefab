@@ -60,6 +60,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -140,7 +141,7 @@ Animator:
   m_GameObject: {fileID: 2110953868529138079}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b98d8d3b20a7185438fe8499629c280b, type: 2}
+  m_Controller: {fileID: 9100000, guid: e7aa95e9541a76d47934f9f748735906, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -163,7 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   isMoving: 0
+  stepName: 2
   newTarget: {x: 0, y: 0}
   position: {x: 0, y: 0}
   minToTarget: 6
   maxToTarget: 9
+  minActsBeforeTargeting: 3
+  props: []

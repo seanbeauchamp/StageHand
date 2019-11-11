@@ -24,12 +24,12 @@
 	  <step>
 		<order>5</order>
 		<action>stall</action>
-		<value>1.0</value>
+		<value>2.0</value>
 	  </step>
 	  <step>
 		<order>6</order>
 		<action>target</action>
-		<value>0</value>
+		<value>2</value>
 	  </step>
 	  <step>
 		<order>7</order>
@@ -60,6 +60,58 @@
 		<order>12</order>
 		<action>move-right</action>
 		<value>.5</value>
+	  </step>
+	</steps>
+	<steps actor="2">
+	  <step>
+		<order>1</order>
+		<action>stall</action>
+		<value>1.5</value>
+	  </step>
+	  <step>
+		<order>2</order>
+		<action>target</action>
+		<value>0</value>
+	  </step>
+	  <step>
+		<order>3</order>
+		<action>move-down</action>
+		<value>1.0</value>
+	  </step>
+      <step>
+		<order>4</order>
+		<action>stall</action>
+		<value>.5</value>
+	  </step>	  
+	  <step>
+		<order>5</order>
+		<action>move-left</action>
+		<value>1.5</value>
+	  </step>
+	  <step>
+		<order>6</order>
+		<action>stall</action>
+		<value>1.5</value>
+	  </step>
+	  <step>
+		<order>7</order>
+		<action>target</action>
+		<value>1</value>
+	  </step>
+	  <step>
+		<order>8</order>
+		<action>move-up</action>
+		<value>.5</value>
+	  </step>
+	  <step>
+		<order>9</order>
+		<action>stall</action>
+		<value>1.0</value>
+	  </step>
+	  <step>
+		<order>10</order>
+		<action>move-right</action>
+		<value>1.0</value>
 	  </step>
 	</steps>
 </stage>

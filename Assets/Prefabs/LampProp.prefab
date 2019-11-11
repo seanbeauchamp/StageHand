@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1324678079}
   m_Layer: 0
   m_Name: LampProp
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +58,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -94,7 +95,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switched: 0
+  eventTargeted: 0
   onTime: 1
+  flashing: 0
+  actorReached: 0
+  lowerLeftCorner: {x: 0, y: 0}
+  lowerRightCorner: {x: 0, y: 0}
 --- !u!61 &1324678079
 BoxCollider2D:
   m_ObjectHideFlags: 0
