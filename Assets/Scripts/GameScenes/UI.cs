@@ -18,12 +18,15 @@ public class UI : MonoBehaviour
     public int stageNum;
 
     public static bool gameRunning = true;
+    public string winScene;
 
     // Start is called before the first frame update
     void Start()
     {
         setTimer();
         stage.text = string.Format("Stage: {0}", stageNum);
+        if (winScene == "")
+            winScene = "title";
     }
 
     // Update is called once per frame
@@ -79,6 +82,6 @@ public class UI : MonoBehaviour
         Text[] textChildren = winObject.GetComponentsInChildren<Text>();
         textChildren[0].enabled = true;
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Title", LoadSceneMode.Single);
+        SceneManager.LoadScene(winScene, LoadSceneMode.Single);
     }
 }

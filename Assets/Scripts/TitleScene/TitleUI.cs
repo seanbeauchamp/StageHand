@@ -19,6 +19,11 @@ public class TitleUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(360, 640, false);
+    }
+
+    private void Awake()
+    {
         positions[0] = start.transform.position.y;
         positions[1] = credits.transform.position.y;
         positions[2] = exit.transform.position.y;
