@@ -138,6 +138,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StepsManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001456, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: m_TagString
+      value: StepsManager
+      objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001458, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,9 +200,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
+      propertyPath: props.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
       propertyPath: docName
       value: level1
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[0]
+      value: 
+      objectReference: {fileID: 1070555912}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[1]
+      value: 
+      objectReference: {fileID: 1848523651}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df82fa10891ecc4dbac8cf76780687d, type: 3}
 --- !u!1001 &161039422
@@ -415,6 +435,11 @@ PrefabInstance:
         type: 3}
       propertyPath: winScene
       value: Level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
+        type: 3}
+      propertyPath: timeLeft
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86124e749b87d9489269843e4047050, type: 3}
@@ -3998,6 +4023,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 36267422}
+    - target: {fileID: 5083595125465574129, guid: 322c3b72ae113244f8b0ad461ac04ff9,
+        type: 3}
+      propertyPath: batTime
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322c3b72ae113244f8b0ad461ac04ff9, type: 3}
 --- !u!1 &1848523651 stripped

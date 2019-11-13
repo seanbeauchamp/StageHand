@@ -8,6 +8,7 @@ public class StepsManager : MonoBehaviour
 {
     public string docName;
     public static List<ActorSteps> actorSteps;
+    public GameObject[] props;
 
     // Start is called before the first frame update
     void Awake()

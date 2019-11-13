@@ -25,8 +25,6 @@ public class Player : Person
 
     private Collider2D ignorableCollision;
 
-    public AudioSource hit;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -82,7 +80,6 @@ public class Player : Person
 
     public IEnumerator HurtRoutine()
     {
-        hit.Play();
         frozen = true;
         IEnumerator flashRoutine = flash();
         StartCoroutine(flashRoutine);

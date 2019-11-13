@@ -6614,6 +6614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StepsManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001456, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: m_TagString
+      value: StepsManager
+      objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001458, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6671,9 +6676,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
+      propertyPath: props.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
       propertyPath: docName
       value: level4
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[0]
+      value: 
+      objectReference: {fileID: 1521503921}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[1]
+      value: 
+      objectReference: {fileID: 1247000723}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[2]
+      value: 
+      objectReference: {fileID: 957147748}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[3]
+      value: 
+      objectReference: {fileID: 375253661}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df82fa10891ecc4dbac8cf76780687d, type: 3}
 --- !u!1001 &1247000722
@@ -7130,6 +7160,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 412602700}
+    - target: {fileID: 5083595125465574129, guid: 322c3b72ae113244f8b0ad461ac04ff9,
+        type: 3}
+      propertyPath: batTime
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322c3b72ae113244f8b0ad461ac04ff9, type: 3}
 --- !u!1001 &2110680675

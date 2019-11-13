@@ -48,7 +48,9 @@ public class Actor : Person
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-        props = GameObject.FindGameObjectsWithTag("Prop");
+        //props = GameObject.FindGameObjectsWithTag("Prop");
+        GameObject stepsManager = GameObject.FindGameObjectWithTag("StepsManager");
+        props = stepsManager.GetComponent<StepsManager>().props;
 
         RetrieveSteps();
 

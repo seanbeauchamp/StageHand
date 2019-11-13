@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 260968734199195336}
   m_Layer: 0
   m_Name: FireplaceProp
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,10 +101,6 @@ MonoBehaviour:
   actorReached: 0
   lowerLeftCorner: {x: 0, y: 0}
   lowerRightCorner: {x: 0, y: 0}
-  confirmSound: {fileID: 3952017461820156487, guid: 62ddb84e6a1a35549903ab6fcb6be6f7,
-    type: 3}
-  wrongSound: {fileID: 9040534630781692169, guid: 72b45b81bfbef004b96164ca164774f3,
-    type: 3}
 --- !u!61 &260968734199195336
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +114,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.15633707}
+  m_Offset: {x: 0, y: -0.28567374}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,5 +125,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.68732584}
+  m_Size: {x: 1, y: 0.42865252}
   m_EdgeRadius: 0

@@ -82,6 +82,7 @@ public class UI : MonoBehaviour
         Text[] textChildren = winObject.GetComponentsInChildren<Text>();
         textChildren[0].enabled = true;
         yield return new WaitForSeconds(3f);
+        gameRunning = true;
         SceneManager.LoadScene(winScene, LoadSceneMode.Single);
     }
 }

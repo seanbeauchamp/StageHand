@@ -192,6 +192,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1164281073}
+    - target: {fileID: 5083595125465574129, guid: 322c3b72ae113244f8b0ad461ac04ff9,
+        type: 3}
+      propertyPath: batTime
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5083595125141303055, guid: 322c3b72ae113244f8b0ad461ac04ff9,
         type: 3}
       propertyPath: batSound
@@ -310,6 +315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StepsManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001456, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: m_TagString
+      value: StepsManager
+      objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001458, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,9 +377,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
+      propertyPath: props.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
       propertyPath: docName
       value: level2
       objectReference: {fileID: 0}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[0]
+      value: 
+      objectReference: {fileID: 1556709948}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[1]
+      value: 
+      objectReference: {fileID: 1429447279}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[2]
+      value: 
+      objectReference: {fileID: 276781455}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df82fa10891ecc4dbac8cf76780687d, type: 3}
 --- !u!1001 &163698555
@@ -571,7 +601,7 @@ PrefabInstance:
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: winScene
-      value: Level 2
+      value: Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
@@ -661,6 +691,14 @@ PrefabInstance:
         type: 3}
       propertyPath: wrongSound
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324678079, guid: 29c3c67665cc3e842b0fdb266e6bb1e2, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.13060533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324678079, guid: 29c3c67665cc3e842b0fdb266e6bb1e2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.058789335
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29c3c67665cc3e842b0fdb266e6bb1e2, type: 3}

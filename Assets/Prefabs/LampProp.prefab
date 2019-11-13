@@ -101,10 +101,6 @@ MonoBehaviour:
   actorReached: 0
   lowerLeftCorner: {x: 0, y: 0}
   lowerRightCorner: {x: 0, y: 0}
-  confirmSound: {fileID: 3952017461820156487, guid: 62ddb84e6a1a35549903ab6fcb6be6f7,
-    type: 3}
-  wrongSound: {fileID: 9040534630781692169, guid: 72b45b81bfbef004b96164ca164774f3,
-    type: 3}
 --- !u!61 &1324678079
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -118,7 +114,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08949713}
+  m_Offset: {x: 0, y: -0.12544516}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -129,5 +125,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.14, y: 0.14100574}
+  m_Size: {x: 0.14, y: 0.06910968}
   m_EdgeRadius: 0
