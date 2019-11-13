@@ -48,9 +48,10 @@ public class TitleUI : MonoBehaviour
             switch (currentCursorPos)
             {
                 case 0:
-                    SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
+                    SceneManager.LoadScene("Level 1", LoadSceneMode.Single);
                     break;
                 case 1:
+                    SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
                     break;
                 case 2:
                     Application.Quit();

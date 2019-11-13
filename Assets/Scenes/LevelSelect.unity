@@ -529,6 +529,12 @@ MonoBehaviour:
   - {fileID: 1171232553}
   - {fileID: 1286870764}
   - {fileID: 501821778}
+  levels:
+  - Level 1
+  - Level 2
+  - Level 3
+  - Level 4
+  - Level 5
 --- !u!1001 &1171232551
 PrefabInstance:
   m_ObjectHideFlags: 0

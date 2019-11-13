@@ -101,6 +101,10 @@ MonoBehaviour:
   actorReached: 0
   lowerLeftCorner: {x: 0, y: 0}
   lowerRightCorner: {x: 0, y: 0}
+  confirmSound: {fileID: 3952017461820156487, guid: 62ddb84e6a1a35549903ab6fcb6be6f7,
+    type: 3}
+  wrongSound: {fileID: 9040534630781692169, guid: 72b45b81bfbef004b96164ca164774f3,
+    type: 3}
 --- !u!61 &261093512741152473
 BoxCollider2D:
   m_ObjectHideFlags: 0

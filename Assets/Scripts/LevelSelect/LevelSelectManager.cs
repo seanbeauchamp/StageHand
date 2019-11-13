@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelSelectManager : MonoBehaviour
 {
     public GameObject[] levelBoxes;
+    public string[] levels;
     private int currentLevelIndex;
 
     // Start is called before the first frame update
@@ -36,6 +37,8 @@ public class LevelSelectManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
             SceneManager.LoadScene("Title", LoadSceneMode.Single);
+        if (Input.GetKeyDown(KeyCode.Space))
+            SceneManager.LoadScene(levels[currentLevelIndex], LoadSceneMode.Single);
     }
 
     void highlightCurrentBox()

@@ -99,6 +99,8 @@ MonoBehaviour:
   frequency: 7
   magnitude: 0.25
   facingRight: 1
+  batSound: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+    type: 3}
 --- !u!95 &2849013003424452280
 Animator:
   serializedVersion: 3

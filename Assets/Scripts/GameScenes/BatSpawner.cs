@@ -25,6 +25,6 @@ public class BatSpawner : MonoBehaviour
     {
         GameObject newBat = Instantiate(bat, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         Bat batScript = newBat.GetComponent<Bat>();
-        batScript.facingRight = facingRight;
+        batScript.facingRight = facingRight;       
     }
 }

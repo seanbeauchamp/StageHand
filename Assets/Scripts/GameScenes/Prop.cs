@@ -49,7 +49,7 @@ public class Prop : MonoBehaviour
     void Update()
     {
         if (!UI.gameRunning)
-            return;
+            Destroy(gameObject);
 
         checkForFlash();
 
@@ -68,9 +68,13 @@ public class Prop : MonoBehaviour
         StartCoroutine(switchCoroutine);
         switchCorrectlyPressed = ((flashing || actorReached) ? true : false);
         if (!switchCorrectlyPressed)
+        {
             ui.changeStaturBarFill(-.05f);
+        }
         else if (flashing)
+        {
             ui.changeStaturBarFill(+.05f);
+        }
     }
 
     public void actorArrived()
@@ -148,7 +152,7 @@ public class Prop : MonoBehaviour
         }
     }
 
-    private void cancelFlashRoutine()
+    public void cancelFlashRoutine()
     {
         if (flashRoutineRunning)
         {

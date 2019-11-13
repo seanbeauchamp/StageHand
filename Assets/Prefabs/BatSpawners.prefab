@@ -58,7 +58,7 @@ MonoBehaviour:
   - {fileID: 63292245965230800}
   - {fileID: 63292245844419719}
   currentLevel: 1
-  batTime: 5
+  batTime: 8
 --- !u!1001 &63292245022159916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +134,11 @@ PrefabInstance:
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &5083595125443210390 stripped
@@ -223,6 +228,11 @@ PrefabInstance:
       propertyPath: level
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &63292245236809409 stripped
@@ -305,13 +315,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
-      propertyPath: facingRight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &63292245534227053 stripped
@@ -401,6 +412,11 @@ PrefabInstance:
       propertyPath: level
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &63292245837939885 stripped
@@ -483,13 +499,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
-      propertyPath: facingRight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &63292245844419719 stripped
@@ -575,6 +592,11 @@ PrefabInstance:
       propertyPath: level
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 972163444, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
+      propertyPath: batSound
+      value: 
+      objectReference: {fileID: 6387898393113302329, guid: 4e076d18f87f4514e91419ad3acdc2d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11784e16bd6aecb4ca94bfca6d2f1078, type: 3}
 --- !u!1 &63292245965230800 stripped

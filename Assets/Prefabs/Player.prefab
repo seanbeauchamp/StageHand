@@ -175,6 +175,7 @@ MonoBehaviour:
   flipCollider: {fileID: 1461696217}
   hurtSprite: {fileID: 0}
   downSprite: {fileID: 0}
+  hit: {fileID: 2920370508031695526, guid: 7aca9703d4717674d9a8a885644b6cdf, type: 3}
 --- !u!61 &1461696217
 BoxCollider2D:
   m_ObjectHideFlags: 0

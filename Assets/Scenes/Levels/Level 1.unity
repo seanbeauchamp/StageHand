@@ -3995,11 +3995,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5083595125465574129, guid: 322c3b72ae113244f8b0ad461ac04ff9,
         type: 3}
-      propertyPath: batTime
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5083595125465574129, guid: 322c3b72ae113244f8b0ad461ac04ff9,
-        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 36267422}

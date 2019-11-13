@@ -5706,6 +5706,11 @@ PrefabInstance:
       propertyPath: winScene
       value: Level 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
+        type: 3}
+      propertyPath: stageNum
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3816841825273568633, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: m_Text
