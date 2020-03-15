@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Player : Person
 {
     float climbSpeed = 1.5f;
 
     public float batTime;
-    private bool batCountingDown = false;
    
     public bool canClimb = false;
     public bool climbing = false;
@@ -17,7 +17,12 @@ public class Player : Person
     Vector2 currentDirection;
 
     private bool frozen = false;
-    
+
+    private float ladderX;
+    public GameObject tilemapGameObject;
+    Tilemap tileMap;
+    float ladderMiddle = 0.125f;
+
     public Collider2D coll2d;
     public Collider2D flipCollider;
     public Sprite hurtSprite;
@@ -31,6 +36,7 @@ public class Player : Person
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
+        tileMap = tilemapGameObject.GetComponent<Tilemap>();
 
         speed = 2.0f;
     }
@@ -169,7 +175,13 @@ public class Player : Person
             currentCast = height / 2f + .02f;
         RaycastHit2D hit = Physics2D.Raycast(center, Vector2.down, currentCast, mask);
         if (hit.collider != null)
+        {
             canClimb = true;
+            //get the tile position from the map, then convert that to the actual game positioning
+            Vector3Int tilePos = tileMap.WorldToCell(hit.point);
+            Vector3 worldTilePos = tileMap.CellToWorld(tilePos);
+            ladderX = worldTilePos.x + ladderMiddle;
+        }
         else
             canClimb = false;
         //if player is trying to move down this turn
@@ -237,6 +249,7 @@ public class Player : Person
     {
         climbing = true;
         flipCollider.enabled = false;
+        transform.position = new Vector3(ladderX, transform.position.y);
     }
 
     void stopClimb()
