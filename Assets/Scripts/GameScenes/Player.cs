@@ -126,11 +126,13 @@ public class Player : Person
 
     void Climb()
     {
+        int vertical = (int)Input.GetAxisRaw("Vertical");
+        if (vertical < -0.1f && !climbing && !atLadderBottom())
+            return;
+
         LadderCheck(0);
         if (!isMoving && !flipping && !frozen && canClimb)
         {
-            int vertical = (int)Input.GetAxisRaw("Vertical");
-
             if (vertical != 0)
             {
                 startClimb();
@@ -161,6 +163,24 @@ public class Player : Person
         }
 
        animator.SetBool("Climb", climbing);
+    }
+
+    //TO-DO: This re-uses a lot of code from part of ladder check. Re-format
+    bool atLadderBottom()
+    {
+        bool ladderFound = false;
+        float height = coll2d.bounds.size.y;
+        Vector2 pointPosition = new Vector2(transform.position.x, transform.position.y - (height / 2f) - 0.05f);
+        Collider2D[] ladderCircles = Physics2D.OverlapCircleAll(pointPosition, 0.01f);
+        foreach (Collider2D ladderCircle in ladderCircles)
+        {
+            if (ladderCircle.gameObject.tag == "Ladder")
+            {
+                ladderFound = true;
+                break;
+            }
+        }
+        return ladderFound;
     }
 
     void LadderCheck(float yVal)
