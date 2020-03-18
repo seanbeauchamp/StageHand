@@ -44,12 +44,14 @@ public class Player : Person
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameStarted)
+            return;
         if (!UI.gameRunning)
             Destroy(gameObject);
 
-            Flip();
-            Move();
-            Climb();
+        Flip();
+        Move();
+        Climb();
     }
 
     void Flip()

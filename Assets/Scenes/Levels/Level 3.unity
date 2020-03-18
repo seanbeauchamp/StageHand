@@ -502,6 +502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1461696218, guid: 2528282501121f6419f1bf960f3c65f0, type: 3}
+      propertyPath: tilemapGameObject
+      value: 
+      objectReference: {fileID: 629761095}
     - target: {fileID: 5265035417309532556, guid: 2528282501121f6419f1bf960f3c65f0,
         type: 3}
       propertyPath: m_Name
@@ -10294,6 +10298,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f554f151cd1dc764fa6c7c66fd5c07cf, type: 3}
+--- !u!1 &629761095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3277706052787111067, guid: f554f151cd1dc764fa6c7c66fd5c07cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 629761094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &889935364
 PrefabInstance:
   m_ObjectHideFlags: 0

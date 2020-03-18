@@ -553,20 +553,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3816841823620135569, guid: f86124e749b87d9489269843e4047050,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591544, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
-        type: 3}
-      propertyPath: winScene
-      value: Level 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
-        type: 3}
-      propertyPath: stageNum
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591548, guid: f86124e749b87d9489269843e4047050,
         type: 3}
@@ -677,11 +672,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3816841825273568633, guid: f86124e749b87d9489269843e4047050,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Stage: 2'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f86124e749b87d9489269843e4047050, type: 3}
@@ -8236,6 +8226,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f554f151cd1dc764fa6c7c66fd5c07cf, type: 3}
+--- !u!1 &1325330140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3277706052787111067, guid: f554f151cd1dc764fa6c7c66fd5c07cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1325330139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429447278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8491,6 +8487,10 @@ PrefabInstance:
       propertyPath: hit
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1461696218, guid: 2528282501121f6419f1bf960f3c65f0, type: 3}
+      propertyPath: tilemapGameObject
+      value: 
+      objectReference: {fileID: 1325330140}
     - target: {fileID: 5265035417309532556, guid: 2528282501121f6419f1bf960f3c65f0,
         type: 3}
       propertyPath: m_Name

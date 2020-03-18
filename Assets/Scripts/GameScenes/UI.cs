@@ -9,6 +9,7 @@ public class UI : MonoBehaviour
 {
     public Text timer;
     public Text stage;
+    public Text statusLabel;
     public Image statusBar;
 
     public GameObject winObject;
@@ -18,15 +19,17 @@ public class UI : MonoBehaviour
     public int stageNum;
 
     public static bool gameRunning = true;
+    public static bool gameStarted = false;
     public string winScene;
 
     // Start is called before the first frame update
     void Start()
     {
-        setTimer();
+        //setTimer();
         stage.text = string.Format("Stage: {0}", stageNum);
         if (winScene == "")
             winScene = "title";
+        StartCoroutine(OpeningLabelAnimation());
     }
 
     // Update is called once per frame
@@ -63,6 +66,23 @@ public class UI : MonoBehaviour
 
         if (statusBar.fillAmount == 0f)
             StartCoroutine(LoseGame());
+    }
+
+    IEnumerator OpeningLabelAnimation()
+    {
+        for (int n = 0; n <= 1; n++)
+        {
+            statusLabel.GetComponent<Text>().enabled = true;
+            yield return new WaitForSeconds(.4f);
+            statusLabel.GetComponent<Text>().enabled = false;
+            yield return new WaitForSeconds(.4f);
+        }
+        statusLabel.GetComponent<Text>().text = "Showtime!!!";
+        statusLabel.GetComponent<Text>().enabled = true;
+        yield return new WaitForSeconds(.8f);
+        statusLabel.GetComponent<Text>().enabled = false;
+        gameStarted = true;
+        setTimer();
     }
 
     IEnumerator LoseGame()

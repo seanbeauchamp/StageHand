@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Actor : Person
 {
-    private bool canAct = false;
+    private bool canAct = true;
     private bool isTargeting = false;
     private bool atTarget = false;
     private Collider2D collider;
@@ -48,7 +48,6 @@ public class Actor : Person
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         collider = GetComponent<Collider2D>();
-        //props = GameObject.FindGameObjectsWithTag("Prop");
         GameObject stepsManager = GameObject.FindGameObjectWithTag("StepsManager");
         props = stepsManager.GetComponent<StepsManager>().props;
 
@@ -57,7 +56,7 @@ public class Actor : Person
         targetDistance = moveDistance - .1f;
         speed = .1f;
         ignoreStagePlatforms();
-        StartCoroutine(stallBetweenActions(1f, 2.5f));
+        //StartCoroutine(stallBetweenActions(1f, 2.5f)); // <---------
         currentActNum = 0;
         currentStepIndex = 0;
         maxSteps = steps.Count;
@@ -67,6 +66,8 @@ public class Actor : Person
     // Update is called once per frame
     void Update()
     {
+        if (!UI.gameStarted)
+            return;
         if (!UI.gameRunning)
             Destroy(gameObject);
 
@@ -91,7 +92,7 @@ public class Actor : Person
         switch (currentStep.Action)
         {
             case "stall":
-                stallBetweenActions((float)currentStep.Value, (float)currentStep.Value);
+                StartCoroutine(stallBetweenActions((float)currentStep.Value, (float)currentStep.Value));
                 break;
             case "target":
                 initiateTargetMove((int)currentStep.Value);
@@ -110,7 +111,6 @@ public class Actor : Person
 
     private void initiateTargetMove(int targetIndex)
     {
-        //currentTargetProp = findNearestProp(true);
         currentTargetProp = props[targetIndex];
         propScript = currentTargetProp.GetComponent<Prop>();
         propScript.flashing = true;
@@ -204,7 +204,6 @@ public class Actor : Person
         atTarget = false;
         canAct = true;
         propScript.actorLeft();
-        //StartCoroutine(stallBetweenActions(1f, 2.5f));
     }
 
     //only needs to be called once, we'll never need these collisions re-enabled
