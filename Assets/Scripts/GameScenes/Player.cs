@@ -44,7 +44,7 @@ public class Player : Person
     // Update is called once per frame
     void Update()
     {
-        if (!UI.gameStarted)
+        if (!UI.gameStarted || PauseScript.currentlyPaused)
             return;
         if (!UI.gameRunning)
             Destroy(gameObject);

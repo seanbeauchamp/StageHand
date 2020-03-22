@@ -12,9 +12,6 @@ public class UI : MonoBehaviour
     public Text statusLabel;
     public Image statusBar;
 
-    public GameObject winObject;
-    public GameObject loseObject;
-
     public float timeLeft = 60f;
     public int stageNum;
 
@@ -25,7 +22,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //setTimer();
+        setTimer();
         stage.text = string.Format("Stage: {0}", stageNum);
         if (winScene == "")
             winScene = "title";
@@ -35,7 +32,7 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!gameRunning)
+        if (!gameRunning || !gameStarted)
             return;
 
         updateTimer();
@@ -88,9 +85,9 @@ public class UI : MonoBehaviour
     IEnumerator LoseGame()
     {
         gameRunning = false;
-        loseObject.GetComponent<Image>().enabled = true;
-        Text[] textChildren = loseObject.GetComponentsInChildren<Text>();
-        textChildren[0].enabled = true;
+        statusLabel.GetComponent<Text>().color = Color.red;
+        statusLabel.GetComponent<Text>().text = "YOU RUINED IT";
+        statusLabel.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("Title", LoadSceneMode.Single);
     }
@@ -98,9 +95,8 @@ public class UI : MonoBehaviour
     public IEnumerator WinGame()
     {
         gameRunning = false;
-        winObject.GetComponent<Image>().enabled = true;
-        Text[] textChildren = winObject.GetComponentsInChildren<Text>();
-        textChildren[0].enabled = true;
+        statusLabel.GetComponent<Text>().text = "GOOD SHOW";
+        statusLabel.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3f);
         gameRunning = true;
         SceneManager.LoadScene(winScene, LoadSceneMode.Single);
