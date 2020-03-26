@@ -20,7 +20,7 @@ public class UI : MonoBehaviour
     public string winScene;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         setTimer();
         stage.text = string.Format("Stage: {0}", stageNum);
@@ -69,8 +69,9 @@ public class UI : MonoBehaviour
     {
         for (int n = 0; n <= 1; n++)
         {
-            statusLabel.GetComponent<Text>().enabled = true;
+            statusLabel.GetComponent<Text>().enabled = true;           
             yield return new WaitForSeconds(.4f);
+            Debug.Log("Loop yielded first time");
             statusLabel.GetComponent<Text>().enabled = false;
             yield return new WaitForSeconds(.4f);
         }
@@ -89,7 +90,7 @@ public class UI : MonoBehaviour
         statusLabel.GetComponent<Text>().text = "YOU RUINED IT";
         statusLabel.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Title", LoadSceneMode.Single);
+        resetGame();
     }
 
     public IEnumerator WinGame()
@@ -100,5 +101,12 @@ public class UI : MonoBehaviour
         yield return new WaitForSeconds(3f);
         gameRunning = true;
         SceneManager.LoadScene(winScene, LoadSceneMode.Single);
+    }
+
+    public static void resetGame()
+    {
+        gameRunning = true;
+        gameStarted = false;
+        SceneManager.LoadScene("Title", LoadSceneMode.Single);
     }
 }
