@@ -71,7 +71,6 @@ public class UI : MonoBehaviour
         {
             statusLabel.GetComponent<Text>().enabled = true;           
             yield return new WaitForSeconds(.4f);
-            Debug.Log("Loop yielded first time");
             statusLabel.GetComponent<Text>().enabled = false;
             yield return new WaitForSeconds(.4f);
         }
