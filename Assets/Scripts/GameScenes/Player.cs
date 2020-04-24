@@ -25,8 +25,6 @@ public class Player : Person
 
     public Collider2D coll2d;
     public Collider2D flipCollider;
-    public Sprite hurtSprite;
-    public Sprite downSprite;
 
     private Collider2D ignorableCollision;
 
