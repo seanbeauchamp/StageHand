@@ -13,6 +13,7 @@ public class Prop : MonoBehaviour
     private IEnumerator switchCoroutine;
     private Coroutine flashCoroutine;
     private Collider2D collider;
+    private SpriteRenderer spotlight;
 
     public bool switched = false;
     public bool eventTargeted = false;
@@ -34,13 +35,12 @@ public class Prop : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider = GetComponent<Collider2D>();
         ui = GameObject.FindGameObjectWithTag("UI").GetComponent<UI>();
+        spotlight = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
         defaultColour = spriteRenderer.color;
         switchedColour = new Color(1.0f, 0.5f, 0.5f);
         greenColour = new Color(0.6f, 1.0f, 0.6f);
 
         switchCoroutine = switchRoutine();
-        //lowerLeftCorner = collider.bounds.min;
-        //lowerRightCorner = collider.bounds.min + new Vector3(collider.bounds.size.x, 0, 0);
         lowerLeftCorner = new Vector2(collider.bounds.min.x, collider.bounds.center.y);
         lowerRightCorner = new Vector2(collider.bounds.min.x + collider.bounds.size.x, collider.bounds.center.y);
     }
@@ -83,7 +83,10 @@ public class Prop : MonoBehaviour
     {
         cancelFlashRoutine();
         if (switchCorrectlyPressed)
-            spriteRenderer.color = greenColour;
+        {
+            spotlight.enabled = true;
+            spriteRenderer.color = defaultColour;
+        }
         else
         {
             spriteRenderer.color = switchedColour;
@@ -94,6 +97,7 @@ public class Prop : MonoBehaviour
     public void actorLeft()
     {
         spriteRenderer.color = defaultColour;
+        spotlight.enabled = false;
         actorReached = false;
         switchCorrectlyPressed = false;
     }
