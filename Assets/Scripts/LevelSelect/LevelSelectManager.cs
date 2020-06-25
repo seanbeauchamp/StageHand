@@ -9,6 +9,7 @@ public class LevelSelectManager : MonoBehaviour
     public GameObject[] levelBoxes;
     public string[] levels;
     private int currentLevelIndex;
+    private bool xAxisInUse = false;
 
     // Start is called before the first frame update
     void Start()
@@ -30,14 +31,14 @@ public class LevelSelectManager : MonoBehaviour
             currentLevelIndex = (currentLevelIndex >= levelBoxes.Length - 1 ? 0 : currentLevelIndex + 1);
             highlightCurrentBox();
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             currentLevelIndex = (currentLevelIndex <= 0 ? levelBoxes.Length - 1 : currentLevelIndex - 1);
             highlightCurrentBox();
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetAxis("Cancel") != 0)
             SceneManager.LoadScene("Title", LoadSceneMode.Single);
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetAxis("Submit") != 0)
             SceneManager.LoadScene(levels[currentLevelIndex], LoadSceneMode.Single);
     }
 

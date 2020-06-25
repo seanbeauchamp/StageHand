@@ -15,6 +15,7 @@ public class TitleUI : MonoBehaviour
     
     public Image cursor;
     int currentCursorPos = 0;
+    public bool yAxisInUse = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +40,17 @@ public class TitleUI : MonoBehaviour
 
     void checkForInput()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetAxisRaw("Vertical") < 0 && !yAxisInUse)
+        {
             currentCursorPos = (currentCursorPos >= positions.Length - 1 ? 0 : currentCursorPos + 1);
-        else if (Input.GetKeyDown(KeyCode.UpArrow))
+            yAxisInUse = true;
+        }
+        else if (Input.GetAxisRaw("Vertical") > 0 && !yAxisInUse)
+        {
             currentCursorPos = (currentCursorPos <= 0 ? positions.Length - 1 : currentCursorPos - 1);
-        else if (Input.GetKeyDown(KeyCode.Space))
+            yAxisInUse = true;
+        }
+        else if (Input.GetAxis("Submit") != 0)
         {
             switch (currentCursorPos)
             {
@@ -60,6 +67,10 @@ public class TitleUI : MonoBehaviour
                 default:
                     break;
             }
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            yAxisInUse = false;
         }
 
         cursor.transform.position = new Vector3(cursor.transform.position.x, positions[currentCursorPos], cursor.transform.position.z);
