@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
@@ -11,6 +8,8 @@ public class PauseScript : MonoBehaviour
 
     public Text[] pauseOptions;
     private int currentOption = 0;
+    private bool yAxisInUse = false;
+    private bool submitPressed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,34 +28,36 @@ public class PauseScript : MonoBehaviour
         if (currentlyPaused)
             pauseSelectionCheck();
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetButtonDown("Submit") && !currentlyPaused && !submitPressed)
         {
-            if (currentlyPaused)
-            {
-                setPause(false, 1);
-            }
-            else
-            {
-                setPause(true, 0);
-            }
+             setPause(true, 0);
         }
+        submitPressed = false;
     }
 
     void pauseSelectionCheck()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetAxisRaw("Vertical") != 0 && !yAxisInUse)
         {
             int prevOption = currentOption;
             currentOption = (currentOption == 0 ? 1 : 0);
 
             pauseOptions[currentOption].color = Color.white;
             pauseOptions[prevOption].color = Color.gray;
+            yAxisInUse = true;
+        }
+        else if (Input.GetAxisRaw("Vertical") == 0)
+        {
+            yAxisInUse = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Submit"))
         {
             if (currentOption == 0)
+            {
                 setPause(false, 1);
+                submitPressed = true;
+            }
             else
             {
                 Time.timeScale = 1;

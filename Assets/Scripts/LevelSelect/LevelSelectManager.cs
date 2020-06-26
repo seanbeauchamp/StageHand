@@ -26,19 +26,25 @@ public class LevelSelectManager : MonoBehaviour
 
     void checkForKeyPresses()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetAxisRaw("Horizontal") > 0 && !xAxisInUse)
         {
             currentLevelIndex = (currentLevelIndex >= levelBoxes.Length - 1 ? 0 : currentLevelIndex + 1);
             highlightCurrentBox();
+            xAxisInUse = true;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (Input.GetAxisRaw("Horizontal") < 0 && !xAxisInUse)
         {
             currentLevelIndex = (currentLevelIndex <= 0 ? levelBoxes.Length - 1 : currentLevelIndex - 1);
             highlightCurrentBox();
+            xAxisInUse = true;
         }
-        if (Input.GetAxis("Cancel") != 0)
+        else if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            xAxisInUse = false;
+        }
+        if (Input.GetButton("Cancel"))
             SceneManager.LoadScene("Title", LoadSceneMode.Single);
-        if (Input.GetAxis("Submit") != 0)
+        if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1"))
             SceneManager.LoadScene(levels[currentLevelIndex], LoadSceneMode.Single);
     }
 

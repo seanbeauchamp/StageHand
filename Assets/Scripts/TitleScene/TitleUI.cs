@@ -50,7 +50,7 @@ public class TitleUI : MonoBehaviour
             currentCursorPos = (currentCursorPos <= 0 ? positions.Length - 1 : currentCursorPos - 1);
             yAxisInUse = true;
         }
-        else if (Input.GetAxis("Submit") != 0)
+        else if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1"))
         {
             switch (currentCursorPos)
             {

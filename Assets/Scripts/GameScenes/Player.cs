@@ -56,7 +56,7 @@ public class Player : Person
     {
         if (!isMoving && !climbing)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Fire1"))
                 StartCoroutine(flipSwitch());
         }
     }
@@ -105,6 +105,11 @@ public class Player : Person
     {
         if (flipping || frozen)
             return;
+
+        if (Input.inputString != "")
+        {
+            Debug.Log(Input.inputString);
+        }
 
         int horizontal = (int)Input.GetAxisRaw("Horizontal");       
 
