@@ -182,7 +182,7 @@
 	   </step>
 	   <step>
 		<order>11</order>
-		<action>move-left</action>
+		<action>move-up</action>
 		<value>1.5</value>
 	   </step>
 	</steps>
