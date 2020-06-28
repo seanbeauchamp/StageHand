@@ -6,7 +6,6 @@ public class Drip : MonoBehaviour
 {
     private Animator animator;
     private Rigidbody2D rb2d;
-    private Collider2D collider;
     private bool dropped;
 
     // Start is called before the first frame update
@@ -14,7 +13,6 @@ public class Drip : MonoBehaviour
     {
         animator = gameObject.GetComponent<Animator>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
-        collider = gameObject.GetComponent<Collider2D>();
         StartCoroutine("StartDrop");
     }
 

@@ -8,6 +8,8 @@ public class VentLeakScript : MonoBehaviour
     [Range(2f, 10f)] [SerializeField] private float initialDrop = 2f;
     [Range(4f, 10f)] [SerializeField] private float nextDrop = 4f;
 
+    private float distanceToBottom = .15f;
+
     private bool firstDropDripped = false;
 
     // Start is called before the first frame update
@@ -30,7 +32,7 @@ public class VentLeakScript : MonoBehaviour
 
     void DropDrip()
     {
-        GameObject newDrip = Instantiate(drip, new Vector2(transform.position.x, transform.position.y - .15f), Quaternion.identity);
+        GameObject newDrip = Instantiate(drip, new Vector2(transform.position.x, transform.position.y - distanceToBottom), Quaternion.identity);
         Invoke("DropDrip", nextDrop);
     }
 }
