@@ -11,17 +11,23 @@ public class UI : MonoBehaviour
     public Text stage;
     public Text statusLabel;
     public Image statusBar;
+    public GameObject retryGroup;
+    private RetryScript retryScript;
 
     public float timeLeft = 60f;
     public int stageNum;
 
-    public static bool gameRunning = true;
-    public static bool gameStarted = false;
+    public static bool gameRunning;
+    public static bool gameStarted;
     public string winScene;
 
     // Start is called before the first frame update
     void Awake()
     {
+        retryScript = retryGroup.GetComponent<RetryScript>();
+        gameRunning = true;
+        gameStarted = false;
+
         setTimer();
         stage.text = string.Format("Stage: {0}", stageNum);
         if (winScene == "")
@@ -46,7 +52,10 @@ public class UI : MonoBehaviour
             setTimer();
         }
         else
-            StartCoroutine(WinGame());
+        {
+            //StartCoroutine(WinGame());
+            StartCoroutine(LoseGame());
+        }
     }
 
     void setTimer()
@@ -89,7 +98,8 @@ public class UI : MonoBehaviour
         statusLabel.GetComponent<Text>().text = "YOU RUINED IT";
         statusLabel.GetComponent<Text>().enabled = true;
         yield return new WaitForSeconds(3f);
-        resetGame();
+        //resetGame();
+        retryScript.EnableRestart();
     }
 
     public IEnumerator WinGame()

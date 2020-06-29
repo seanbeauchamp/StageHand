@@ -22,7 +22,10 @@ public class VentLeakScript : MonoBehaviour
     void Update()
     {
         if (!UI.gameStarted || (!UI.gameRunning))
+        {
+            CancelInvoke();
             return;
+        }
         if (!firstDropDripped)
         {
             Invoke("DropDrip", initialDrop);

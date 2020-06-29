@@ -19,7 +19,8 @@ public class Drip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!UI.gameRunning)
+            Destroy(gameObject);
     }
 
     IEnumerator StartDrop()

@@ -856,6 +856,7 @@ MonoBehaviour:
   stage: {fileID: 3816841825273568633}
   statusLabel: {fileID: 86773582}
   statusBar: {fileID: 3816841823727492635}
+  retryGroup: {fileID: 3582607088291996848}
   timeLeft: 120
   stageNum: 2
   winScene: Level 2

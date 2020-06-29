@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RetryScript : MonoBehaviour
 {
@@ -42,6 +40,19 @@ public class RetryScript : MonoBehaviour
         else if (Input.GetAxisRaw("Vertical") == 0)
         {
             yAxisInUse = false;
+        }
+        
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Submit"))
+        {
+            if (currentOption == 0)
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.buildIndex);
+            }
+            else
+            {
+                UI.resetGame();
+            }
         }
     }
 

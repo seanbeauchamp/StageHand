@@ -27,7 +27,7 @@ public class SpawnLogic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!UI.gameRunning)
+        if (!UI.gameRunning || !UI.gameStarted)
             return;
 
         checkPlayerLevel();
