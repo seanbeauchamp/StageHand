@@ -70,6 +70,8 @@ public class PauseScript : MonoBehaviour
     {
         currentlyPaused = status;
         pausePanel.SetActive(status);
+        for (int n = 0; n < pauseOptions.Length; n++)
+            pauseOptions[n].enabled = status;
         Time.timeScale = timeScale;
     }
 }
