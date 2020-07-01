@@ -8,9 +8,10 @@ public class TitleUI : MonoBehaviour
 {
     public Text start;
     public Text credits;
+    public Text howTo;
     public Text exit;
 
-    float[] positions = new float[3];
+    float[] positions = new float[4];
     float cursorOrigin;
     
     public Image cursor;
@@ -27,7 +28,8 @@ public class TitleUI : MonoBehaviour
     {
         positions[0] = start.transform.position.y;
         positions[1] = credits.transform.position.y;
-        positions[2] = exit.transform.position.y;
+        positions[2] = howTo.transform.position.y;
+        positions[3] = exit.transform.position.y;
 
         cursor.transform.position = new Vector3(cursor.transform.position.x, positions[currentCursorPos], cursor.transform.position.z);
     }
@@ -61,6 +63,9 @@ public class TitleUI : MonoBehaviour
                     SceneManager.LoadScene("LevelSelect", LoadSceneMode.Single);
                     break;
                 case 2:
+                    SceneManager.LoadScene("HowToPlay", LoadSceneMode.Single);
+                    break;
+                case 3:
                     Application.Quit();
                     Debug.Log("Game Exited");
                     break;
