@@ -29,10 +29,17 @@ public class Prop : MonoBehaviour
     public Vector2 lowerLeftCorner;
     public Vector2 lowerRightCorner;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip startSound;
+    [SerializeField] AudioClip failSound;
+    [SerializeField] AudioClip succeedSound;
+
+
     // Start is called before the first frame update
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         collider = GetComponent<Collider2D>();
         ui = GameObject.FindGameObjectWithTag("UI").GetComponent<UI>();
         spotlight = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
@@ -72,10 +79,14 @@ public class Prop : MonoBehaviour
         if (!switchCorrectlyPressed)
         {
             ui.changeStaturBarFill(-.05f);
+            audioSource.Stop();
+            audioSource.PlayOneShot(failSound);
         }
         else if (flashing)
         {
             ui.changeStaturBarFill(+.05f);
+            audioSource.Stop();
+            audioSource.PlayOneShot(succeedSound);
         }
     }
 
@@ -86,11 +97,13 @@ public class Prop : MonoBehaviour
         {
             spotlight.enabled = true;
             spriteRenderer.color = defaultColour;
+            
         }
         else
         {
             spriteRenderer.color = switchedColour;
             decreaseStatus();
+            
         }
     }
 
@@ -146,6 +159,8 @@ public class Prop : MonoBehaviour
     private IEnumerator flashRoutine()
     {
         flashRoutineRunning = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(startSound);
         while (flashing)
         {
             if (switchCorrectlyPressed)

@@ -28,7 +28,7 @@ public class PauseScript : MonoBehaviour
         if (currentlyPaused)
             pauseSelectionCheck();
 
-        if (Input.GetButtonDown("Submit") && !currentlyPaused && !submitPressed)
+        if ((Input.GetButtonDown("Submit") || Input.GetButtonDown("KeyPause")) && !currentlyPaused && !submitPressed)
         {
              setPause(true, 0);
         }

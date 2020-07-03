@@ -299,6 +299,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846c8dce0ecfce345b5e22d52890b14a, type: 3}
+--- !u!1 &89985973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 153269066414594135, guid: 846c8dce0ecfce345b5e22d52890b14a,
+    type: 3}
+  m_PrefabInstance: {fileID: 89985972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &95671958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,12 +523,12 @@ PrefabInstance:
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: props.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: docName
-      value: level2
+      value: level7
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
@@ -539,6 +545,11 @@ PrefabInstance:
       propertyPath: props.Array.data[2]
       value: 
       objectReference: {fileID: 276781455}
+    - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
+        type: 3}
+      propertyPath: props.Array.data[3]
+      value: 
+      objectReference: {fileID: 89985973}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6df82fa10891ecc4dbac8cf76780687d, type: 3}
 --- !u!1001 &163698555
@@ -635,7 +646,12 @@ PrefabInstance:
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: winScene
-      value: Level 3
+      value: Level 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
+        type: 3}
+      propertyPath: stageNum
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591548, guid: f86124e749b87d9489269843e4047050,
         type: 3}
@@ -858,7 +874,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prop
       value: 
-      objectReference: {fileID: 1429447279}
+      objectReference: {fileID: 276781455}
     - target: {fileID: 8243857199427936982, guid: 5925ba8e45e083242bd718b844f95607,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1020,7 +1036,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prop
       value: 
-      objectReference: {fileID: 276781455}
+      objectReference: {fileID: 89985973}
     - target: {fileID: 8243857199427936982, guid: 5925ba8e45e083242bd718b844f95607,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18249,6 +18265,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8243857199427936980, guid: 5925ba8e45e083242bd718b844f95607,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1164281073}
+    - target: {fileID: 8243857199427936980, guid: 5925ba8e45e083242bd718b844f95607,
+        type: 3}
+      propertyPath: prop
+      value: 
+      objectReference: {fileID: 1556709948}
     - target: {fileID: 8243857199427936982, guid: 5925ba8e45e083242bd718b844f95607,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18318,6 +18344,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8440801753705494098, guid: fb41959bd70265a4e973cce0c5c96c1a,
+        type: 3}
+      propertyPath: initialDrop
+      value: 4.02
+      objectReference: {fileID: 0}
     - target: {fileID: 9001113196621966365, guid: fb41959bd70265a4e973cce0c5c96c1a,
         type: 3}
       propertyPath: m_Name
@@ -18847,7 +18878,7 @@ PrefabInstance:
         type: 3}
       propertyPath: prop
       value: 
-      objectReference: {fileID: 1556709948}
+      objectReference: {fileID: 1429447279}
     - target: {fileID: 8243857199427936982, guid: 5925ba8e45e083242bd718b844f95607,
         type: 3}
       propertyPath: m_LocalPosition.x

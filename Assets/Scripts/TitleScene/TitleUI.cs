@@ -18,9 +18,14 @@ public class TitleUI : MonoBehaviour
     int currentCursorPos = 0;
     public bool yAxisInUse = false;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip moveSound;
+    [SerializeField] AudioClip confirmSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Screen.SetResolution(360, 640, false);
     }
 
@@ -46,14 +51,20 @@ public class TitleUI : MonoBehaviour
         {
             currentCursorPos = (currentCursorPos >= positions.Length - 1 ? 0 : currentCursorPos + 1);
             yAxisInUse = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(moveSound);
         }
         else if (Input.GetAxisRaw("Vertical") > 0 && !yAxisInUse)
         {
             currentCursorPos = (currentCursorPos <= 0 ? positions.Length - 1 : currentCursorPos - 1);
             yAxisInUse = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(moveSound);
         }
         else if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1"))
         {
+            audioSource.Stop();
+            audioSource.PlayOneShot(confirmSound);
             switch (currentCursorPos)
             {
                 case 0:

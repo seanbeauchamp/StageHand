@@ -4,7 +4,7 @@
 	  <step>
 		<order>1</order>
 		<action>stall</action>
-		<value>1.5</value>
+		<value>2</value>
 	  </step>
 	  <step>
 		<order>2</order>
@@ -29,7 +29,7 @@
 	  <step>
 		<order>6</order>
 		<action>target</action>
-		<value>1</value>
+		<value>2</value>
 	  </step>
 	  <step>
 		<order>7</order>
@@ -66,12 +66,12 @@
 	  <step>
 		<order>1</order>
 		<action>stall</action>
-		<value>2</value>
+		<value>1.5</value>
 	  </step>
 	  <step>
 		<order>2</order>
 		<action>target</action>
-		<value>2</value>
+		<value>3</value>
 	  </step>
 	  <step>
 		<order>3</order>

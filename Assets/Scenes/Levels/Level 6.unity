@@ -12106,12 +12106,12 @@ PrefabInstance:
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: winScene
-      value: Level 5
+      value: Level 7
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: stageNum
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591548, guid: f86124e749b87d9489269843e4047050,
         type: 3}
@@ -12532,7 +12532,7 @@ PrefabInstance:
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
       propertyPath: docName
-      value: level4
+      value: level6
       objectReference: {fileID: 0}
     - target: {fileID: 4333530860125001459, guid: 6df82fa10891ecc4dbac8cf76780687d,
         type: 3}
@@ -12730,7 +12730,7 @@ PrefabInstance:
     - target: {fileID: 8786564620334908302, guid: e0ca85297d4f46d4bb7a590de7da6ded,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.65640694
+      value: -0.41
       objectReference: {fileID: 0}
     - target: {fileID: 8786564620334908302, guid: e0ca85297d4f46d4bb7a590de7da6ded,
         type: 3}

@@ -28,9 +28,14 @@ public class Player : Person
 
     private Collider2D ignorableCollision;
 
+    [SerializeField] AudioClip hurtSound;
+    [SerializeField] AudioClip switchSound;
+    private AudioSource audioSource; 
+
     // Start is called before the first frame update
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
@@ -64,8 +69,9 @@ public class Player : Person
     IEnumerator flipSwitch()
     {
         flipping = true;
-        animator.SetBool("Flip", true);       
-
+        animator.SetBool("Flip", true);
+        audioSource.Stop();
+        audioSource.PlayOneShot(switchSound);
         yield return new WaitForSeconds(.1f);
         flipping = false;
         animator.SetBool("Flip", false);
@@ -87,6 +93,8 @@ public class Player : Person
     public IEnumerator HurtRoutine()
     {
         frozen = true;
+        audioSource.Stop();
+        audioSource.PlayOneShot(hurtSound);
         IEnumerator flashRoutine = flash();
         StartCoroutine(flashRoutine);
         animator.SetBool("Hurt", true);

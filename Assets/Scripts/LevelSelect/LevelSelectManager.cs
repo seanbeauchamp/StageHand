@@ -11,9 +11,14 @@ public class LevelSelectManager : MonoBehaviour
     private int currentLevelIndex;
     private bool xAxisInUse = false;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip moveSound;
+    [SerializeField] AudioClip confirmSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         currentLevelIndex = 0;
         highlightCurrentBox();
     }
@@ -31,21 +36,33 @@ public class LevelSelectManager : MonoBehaviour
             currentLevelIndex = (currentLevelIndex >= levelBoxes.Length - 1 ? 0 : currentLevelIndex + 1);
             highlightCurrentBox();
             xAxisInUse = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(moveSound);
         }
         else if (Input.GetAxisRaw("Horizontal") < 0 && !xAxisInUse)
         {
             currentLevelIndex = (currentLevelIndex <= 0 ? levelBoxes.Length - 1 : currentLevelIndex - 1);
             highlightCurrentBox();
             xAxisInUse = true;
+            audioSource.Stop();
+            audioSource.PlayOneShot(moveSound);
         }
         else if (Input.GetAxisRaw("Horizontal") == 0)
         {
             xAxisInUse = false;
         }
         if (Input.GetButton("Cancel"))
+        {
             SceneManager.LoadScene("Title", LoadSceneMode.Single);
+            audioSource.Stop();
+            audioSource.PlayOneShot(confirmSound);
+        }
         if (Input.GetButtonDown("Submit") || Input.GetButtonDown("Fire1"))
+        {
             SceneManager.LoadScene(levels[currentLevelIndex], LoadSceneMode.Single);
+            audioSource.Stop();
+            audioSource.PlayOneShot(confirmSound);
+        }
     }
 
     void highlightCurrentBox()
