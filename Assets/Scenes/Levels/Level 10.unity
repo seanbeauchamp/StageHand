@@ -12053,7 +12053,7 @@ PrefabInstance:
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}
       propertyPath: stageNum
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3816841824226591545, guid: f86124e749b87d9489269843e4047050,
         type: 3}

@@ -75,7 +75,7 @@
     </step>
     <step>
       <order>3</order>
-      <action>move-right</action>
+      <action>move-up</action>
       <value>0.5</value>
     </step>
     <step>
@@ -86,12 +86,12 @@
     <step>
       <order>5</order>
       <action>move-left</action>
-      <value>1.5</value>
+      <value>1.0</value>
     </step>
     <step>
       <order>6</order>
       <action>stall</action>
-      <value>1.5</value>
+      <value>2.0</value>
     </step>
     <step>
       <order>7</order>

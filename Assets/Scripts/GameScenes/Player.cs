@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -6,6 +7,7 @@ using UnityEngine.Tilemaps;
 public class Player : Person
 {
     float climbSpeed = 1.5f;
+    float minY;
 
     public float batTime;
    
@@ -40,7 +42,7 @@ public class Player : Person
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         tileMap = tilemapGameObject.GetComponent<Tilemap>();
-
+        minY = transform.position.y;
         speed = 2.0f;
     }
 
@@ -55,6 +57,17 @@ public class Player : Person
         Flip();
         Move();
         Climb();
+
+        accountForGravityFail();
+    }
+
+    private void accountForGravityFail()
+    {
+        if (transform.position.y < minY)
+        {
+            transform.position = new Vector3(transform.position.x, minY, transform.position.z);
+        }
+
     }
 
     void Flip()
@@ -151,6 +164,7 @@ public class Player : Person
                 startClimb();
                 animator.enabled = true;
                 rb2d.gravityScale = 0;
+                rb2d.velocity = Vector3.zero;
                 currentDirection = new Vector2(0, (float)vertical);
                 LadderCheck(currentDirection.y);               
                 if (canClimb)

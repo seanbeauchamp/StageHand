@@ -120,7 +120,7 @@ public class Prop : MonoBehaviour
         elapsedTime += Time.deltaTime;
         if (elapsedTime >= 1f)
         {
-            ui.changeStaturBarFill(-.075f);
+            ui.changeStaturBarFill(-.06f);
             elapsedTime = 0f;
         }
     }

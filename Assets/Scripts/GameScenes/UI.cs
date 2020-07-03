@@ -53,8 +53,8 @@ public class UI : MonoBehaviour
         }
         else
         {
-            //StartCoroutine(WinGame());
-            StartCoroutine(LoseGame());
+            StartCoroutine(WinGame());
+            //StartCoroutine(LoseGame());
         }
     }
 
